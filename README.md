@@ -13,16 +13,16 @@ Usage
 The main idea here is to be as simple as possible, basically you just instantiate the library and execute
 any of the methods in it, I've implemented all the public API methods available for the moment.
 
-	// Configuration options
+	// Configuration file
+	$config['stripe_key_test_secret']         = '';	
 	$config['stripe_key_test_public']         = '';
-	$config['stripe_key_test_secret']         = '';
-	$config['stripe_key_live_public']         = '';
 	$config['stripe_key_live_secret']         = '';
+	$config['stripe_key_live_public']         = '';
 	$config['stripe_test_mode']               = TRUE;
 	$config['stripe_verify_ssl']              = FALSE;
 
 	// Create the library object
-	$stripe = new Stripe( $config );
+	$stripe = new Stripe($config);
 
 	// Run the required operations
 	echo $stripe->customer_list();
